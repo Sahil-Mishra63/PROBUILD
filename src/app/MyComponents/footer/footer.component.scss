@@ -3,12 +3,37 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    // height: 100%;
 }
+
+html{
+    height: 100%;
+}
+
+.down{
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+// body{
+//     overflow-x: hidden;
+// }
 
 .footer{
     background-color: black;
-    width: 100%;
+    width: 100vw;
     height: 250px;
+    // position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .content{

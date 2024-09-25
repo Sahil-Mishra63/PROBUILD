@@ -1,8 +1,7 @@
-<body>
   <div class="header">
     <div class="navbar">
       <span
-        ><button class="button" id="animatedButton resume" >
+        ><button class="button" id="animatedButton resume" (click)="scrollToSection('resume')">
           <div class="outline"></div>
           <div class="state state--default">
             <div class="icon">
@@ -87,7 +86,7 @@
         </button>
       </span>
       <span>
-        <button class="button" id="animatedButton mail" (click)="refreshPage()">
+        <button class="button" id="animatedButton mail" (click)="scrollToSection('mail')">
             <div class="outline"></div>
             <div class="state mail">
               <div class="icon">
@@ -175,8 +174,8 @@
           </button>
       </span>
 
-      <span>
-        <button class="button" id="animatedButton about">
+      <!-- <span>
+        <button class="button" id="animatedButton about" (click)="scrollToSection('foot')">
             <div class="outline"></div>
             <div class="state state--default">
               <div class="icon">
@@ -259,7 +258,7 @@
               </p>
             </div>
           </button>
-      </span>
+      </span> -->
       <span>
         <button (click)="refreshPage()" >
         <img src="https://i.imgur.com/sT3L9pb.png" alt="probuild" width="70px">
@@ -267,4 +266,3 @@
       </span>
     </div>
   </div>
-</body>

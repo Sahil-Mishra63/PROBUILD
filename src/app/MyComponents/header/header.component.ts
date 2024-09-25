@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,4 +11,18 @@ export class HeaderComponent {
   refreshPage(){
     window.location.reload();
   }
+
+  scrollToSection(sectionId: string){
+    const element = document.getElementById(sectionId);
+    if(element){
+      element.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+
+  openEmailGenerator(){
+    window.open('/email-generator', '_blank');
+  }
+  
+
+
 }
