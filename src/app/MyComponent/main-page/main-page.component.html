@@ -83,11 +83,17 @@
                 <div id="add-skill-input-div" class="mt-2 text-start">
                     <label for="skill-input">Skills</label>
                     <div class="input-group" id="skill-input-section">
-                        <input type="text" class="form-control" id="skill-input" placeholder="Enter your relvant skill">
+                        <input type="text" [(ngModel)]="newSkill" class="form-control" id="skill-input" placeholder="Enter your relevant skill">
                     <div class=" input-group-append">
-                        <button class="btn btn-primary" id="skill-input-button" type="button" onclick="addSkill()">Add
+                        <button class="btn btn-primary" id="skill-input-button" type="button" (click)="addSkill()">Add
                             <i class=" fa-solid fa-circle-plus"></i>
                         </button>
+                    </div>
+                </div>
+                <div id="skills" *ngFor="let skill as skills; let i as index">
+                    <div class="skill-item my-2 d-flex justify-content-between">
+                        <span>{{skill}}</span>
+                        <button class="btn btn-danger btn-sm" (click)="removeSkill(i)">Remove</button>
                     </div>
                 </div>
             </div>
@@ -97,18 +103,20 @@
             <!-- Work Experience -->
             <div class="form-group mt-2" id="experience-div">
                 <label for="experience">Experience</label>
-                <textarea id="experience-1" cols="30" rows="3" placeholder="Enter work/project experience"
+                <textarea id="experience-1" [(ngModel)]="newWE" cols="30" rows="3" placeholder="Enter work/project experience"
                     class="form-control we-field"></textarea>
 
                 <div class="d-grid d-md-flex gap-2 justify-content-md-end mt-2" id="we-btns-div">
-                    <button class="btn btn-primary" id="we-add-btn" onclick="addWorkExperience()">Add Experience
+                    <button class="btn btn-primary" id="we-add-btn" (click)="addWorkExperience()">Add Experience
                         <i class="fa-solid fa-circle-plus"></i>
                     </button>
+                </div>
 
-                    <button class="btn btn-danger" id="we-del-btn" onclick="removeWorkExperience()">Remove
-                        Experience
-                        <i class="fa-solid fa-trash-can"></i>
-                    </button>
+                <div id="experiences" *ngFor="let exp as experiences; let i as index">
+                    <div class="experience-item my-2 d-flex justify-content-between">
+                        <span>{{exp}}</span>
+                        <button class="btn btn-danger btn-sm" (click)="removeWorkExperience(i)">Remove</button>
+                    </div>
                 </div>
             </div>
 
@@ -123,12 +131,6 @@
                 <div class="d-grid d-md-flex gap-2 justify-content-md-end mt-2" id="ed-btns-div">
                     <button class="btn btn-primary" id="ed-add-btn" onclick="addEducation()">Add Education
                         <i class="fa-solid fa-circle-plus"></i>
-                    </button>
-
-                    <button class="btn btn-outline-danger" id="ed-del-btn" onclick="removeEducation()"
-                        disabled=true>Remove
-                        Education
-                        <i class="fa-solid fa-trash-can"></i>
                     </button>
 
                 </div>

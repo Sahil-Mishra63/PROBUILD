@@ -7,11 +7,12 @@ import { MainPageComponent } from "./MyComponent/main-page/main-page.component";
 import { EmailGenComponent } from "./MyComponents/email-gen/email-gen.component";
 import { ExpertisePageComponent } from "./expertise-page/expertise-page.component";
 import { MainFresherPageComponent } from "./main-fresher-page/main-fresher-page.component";
+import { FrontPageComponent } from "./front-page/front-page.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainPageComponent, EmailGenComponent, ExpertisePageComponent, MainFresherPageComponent, RouterModule],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainPageComponent, EmailGenComponent, ExpertisePageComponent, MainFresherPageComponent, RouterModule, FrontPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

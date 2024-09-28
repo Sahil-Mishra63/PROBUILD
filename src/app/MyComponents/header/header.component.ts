@@ -1,4 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Route } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -12,11 +16,8 @@ export class HeaderComponent {
     window.location.reload();
   }
 
-  scrollToSection(sectionId: string){
-    const element = document.getElementById(sectionId);
-    if(element){
-      element.scrollIntoView({behavior: 'smooth'});
-    }
+  openExpertisePage(){
+    window.open('/expertise');
   }
 
   openEmailGenerator(){

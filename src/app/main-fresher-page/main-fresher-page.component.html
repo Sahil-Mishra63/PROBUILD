@@ -83,14 +83,19 @@
                 <div id="add-skill-input-div" class="mt-2 text-start">
                     <label for="skill-input">Skills</label>
                     <div class="input-group" id="skill-input-section">
-                        <input type="text" class="form-control" id="skill-input" placeholder="Enter your relvant skill">
+                        <input type="text" [(ngModel)]="newSkill" class="form-control" id="skill-input" placeholder="Enter your relevant skill">
                     <div class=" input-group-append">
-                        <button class="btn btn-primary" id="skill-input-button" type="button" onclick="addSkill()">Add
+                        <button class="btn btn-primary" id="skill-input-button" type="button" (click)="addSkill()">Add
                             <i class=" fa-solid fa-circle-plus"></i>
                         </button>
                     </div>
                 </div>
-                <div id="skills"></div>
+                <div id="skills" *ngFor="let skill of skills; let i = index">
+                    <div class="skill-item my-2 d-flex justify-content-between">
+                        <div class="skill-item my-2">{{skill}}</div>
+                    <button class="btn btn-danger btn-sm" (click)="removeSkill(i)">Remove</button>
+                    </div>
+                </div>
             </div>
             <!-- https://getbootstrap.com/docs/4.0/components/input-group/ -->
 
