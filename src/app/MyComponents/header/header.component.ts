@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  refreshPage(){
-    window.location.reload();
+  gotoFrontPage(){
+    window.open('/front')
   }
 
   openExpertisePage(){

@@ -27,4 +27,22 @@ skills: string[] = [];
   removeSkill(index: number){
     this.skills.splice(index, 1);
   }
+
+  newEd: string = '';
+  educations: string[] = [];
+
+  addEducation(){
+    if(this.newEd.trim()){
+      this.educations.push(this.newEd.trim());
+      this.newEd = '';
+    }
+  }
+
+  removeEducation(index: number){
+    this.educations.splice(index, 1);
+  }
+
+  startOver(){
+    window.location.reload();
+  }
 }

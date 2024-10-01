@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 
-
 @Component({
   selector: 'app-main-page',
   standalone: true,
@@ -40,5 +39,23 @@ export class MainPageComponent {
 
   removeWorkExperience(index: number){
     this.experiences.splice(index, 1);
+  }
+
+  newEd: string = '';
+  educations: string[] = [];
+
+  addEducation(){
+    if(this.newEd.trim()){
+      this.educations.push(this.newEd.trim());
+      this.newEd = '';
+    }
+  }
+
+  removeEducation(index: number){
+        this.educations.splice(index, 1);
+  }
+
+  startOver(){
+    window.location.reload();
   }
 }

@@ -5,6 +5,8 @@ import { ExpertisePageComponent } from './expertise-page/expertise-page.componen
 import { MainFresherPageComponent } from './main-fresher-page/main-fresher-page.component';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -14,6 +16,7 @@ export const appRoutes: Routes = [
     { path: 'main', component: MainPageComponent},
     { path: 'email-generator', component: EmailGeneratorComponent},
     { path: 'fresher', component: MainFresherPageComponent},
+    { path: 'front', component: FrontPageComponent },
 ];
 
 // @NgModule({

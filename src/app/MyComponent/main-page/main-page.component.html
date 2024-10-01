@@ -90,8 +90,8 @@
                         </button>
                     </div>
                 </div>
-                <div id="skills" *ngFor="let skill as skills; let i as index">
-                    <div class="skill-item my-2 d-flex justify-content-between">
+                <div id="skills" *ngFor="let skill of skills; let i = index">
+                    <div class="skill-item my-2 d-flex justify-content-between ">
                         <span>{{skill}}</span>
                         <button class="btn btn-danger btn-sm" (click)="removeSkill(i)">Remove</button>
                     </div>
@@ -112,8 +112,8 @@
                     </button>
                 </div>
 
-                <div id="experiences" *ngFor="let exp as experiences; let i as index">
-                    <div class="experience-item my-2 d-flex justify-content-between">
+                <div id="experiences" *ngFor="let exp of experiences; let i = index">
+                    <div class="experience-item my-2 d-flex justify-content-between bg-white p-2 border rounded">
                         <span>{{exp}}</span>
                         <button class="btn btn-danger btn-sm" (click)="removeWorkExperience(i)">Remove</button>
                     </div>
@@ -124,26 +124,30 @@
             <!--  Education -->
             <div class="form-group mt-2" id="education-div">
                 <label for="education">Education</label>
-                <textarea id="education-1" cols="30" rows="3" placeholder="Enter academic qualifiaction"
+                <textarea id="education-1" [(ngModel)]="newEd" cols="30" rows="3" placeholder="Enter academic qualifiaction"
                     class="form-control ed-field"></textarea>
 
                 <!-- <div class="container text-center mt-2" id="ed-btns-div"> -->
                 <div class="d-grid d-md-flex gap-2 justify-content-md-end mt-2" id="ed-btns-div">
-                    <button class="btn btn-primary" id="ed-add-btn" onclick="addEducation()">Add Education
+                    <button class="btn btn-primary"  id="ed-add-btn" (click)="addEducation()">Add Education
                         <i class="fa-solid fa-circle-plus"></i>
                     </button>
-
                 </div>
             </div>
-
+            <div id="educations" *ngFor="let ed of educations; let i = index">
+                <div class="skill-item my-2 d-flex justify-content-between bg-white p-2 border rounded">
+                    <span>{{ed}}</span>
+                    <button class="btn btn-danger btn-sm" (click)="removeEducation(i)">Remove</button>
+                </div>
+            </div>
         </div>
 
     </div>
     <div class="container text-center mt-4 mb-3 submit-btn">
-        <button onclick="startOver()" class="btn btn-outline-secondary">Reset
+        <button (click)="startOver()" class="btn btn-outline-secondary">Reset
             <i class="fa-solid fa-rotate-right"></i>
         </button>
-        <button onclick="generateResume()" class="btn btn-success">Generate Resume
+        <button class="btn btn-success">Generate Resume
             <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
     </div>
