@@ -1,0 +1,112 @@
+
+
+.container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    height: 700px;
+}
+
+.sidebar {
+    background-color: #d9e8d0;
+    width: 35%;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.job-title {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.profile, .contact {
+    margin-top: 20px;
+}
+
+.profile h3, .contact h3 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    width: 65%;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.education-entry, .work-entry {
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #666;
+}
+
+.skills {
+    margin-top: 10px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill span {
+    display: inline-block;
+    width: 100px;
+}
+
+.bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 20px;
+    display: inline-block;
+}
+
+.progress {
+    background-color: #4CAF50;
+    height: 20px;
+}
+
+.download{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,123 @@
+.container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Left Column */
+.left-column {
+    width: 35%;
+    background-color: #c4a79c;
+    padding: 30px;
+    color: #fff;
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.about p, .contact-info p, .skills ul, .reference p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.skills ul, .contact-info ul {
+    list-style: none;
+}
+
+.skills ul li {
+    margin: 10px 0;
+}
+
+.contact-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info ul li span {
+    margin-right: 10px;
+}
+
+.reference {
+    margin-top: 20px;
+}
+
+/* Right Column */
+.right-column {
+    width: 65%;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #c4a79c;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.work-experience, .education, .hobbies {
+    margin-bottom: 30px;
+}
+
+.work-experience h3, .education h3, .hobbies h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.work-experience p, .education p, .hobbies p {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.work-experience .job, .education .school {
+    margin-bottom: 20px;
+}
+
+.hobbies-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hobbies-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.download{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}

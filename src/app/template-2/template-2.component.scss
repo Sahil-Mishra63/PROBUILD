@@ -1,0 +1,147 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     font-family: Arial, sans-serif;
+// }
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.left-column {
+    width: 35%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.contact, .interests, .languages {
+    margin-top: 20px;
+}
+
+.contact h3, .interests h3, .languages h3 {
+    background-color: #333;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.contact p, .interests ul, .languages ul {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.right-column {
+    width: 65%;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 span {
+    color: #d8a861; /* Gold color for the last name */
+}
+
+h2 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about, .education, .skills {
+    margin-bottom: 30px;
+}
+
+.about h3, .education h3, .skills h3 {
+    font-size: 22px;
+    color: #d8a861;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about p, .education p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.education ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.education ul li {
+    margin-bottom: 15px;
+}
+
+.education ul li::before {
+    content: '•';
+    color: #d8a861;
+    margin-right: 10px;
+}
+
+.skills .skill {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.skills .skill-name {
+    width: 40%;
+    font-size: 16px;
+    color: #333;
+}
+
+.skills .skill-level {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.skills .progress-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #ddd;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.skills .progress-bar-fill {
+    height: 10px;
+    background-color: #d8a861;
+    border-radius: 5px;
+}
+
+.skills .skill-percentage {
+    font-size: 14px;
+    color: #333;
+}
+
+.download{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}

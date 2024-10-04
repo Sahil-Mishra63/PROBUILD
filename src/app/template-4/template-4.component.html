@@ -1,0 +1,71 @@
+<div class="container" id="resume-content">
+    <div class="left-column">
+        <div class="profile-picture">
+            <img *ngIf="userDetails.profileImg" [src]="userDetails.profileImg" class="img-thumbnail" alt="Profile Picture">
+        </div>
+        <h2>About Me:</h2>
+        <p>
+            {{userDetails.objective}}
+        </p>
+        <h2>Skills:</h2>
+        <ul>
+            <li *ngFor="let skill of userDetails.skills">
+                {{skill}}
+            </li>
+        </ul>
+
+        <h2>Languages:</h2>
+        <div class="language-bar">
+            <ul>
+                <li *ngFor="let lang of userDetails.languages">
+                    {{lang}}
+                </li>
+            </ul>
+        </div>
+
+        <h2>Hobbies/interests:</h2>
+        <ul>
+            <li *ngFor="let hobbie of userDetails.hobbies">
+                {{hobbie}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="right-column">
+        <h1>{{userDetails.name}}</h1>
+        <!-- <h3>Graphic Designer</h3> -->
+        <div class="contact-info">
+            <p><strong>Phone:</strong> {{userDetails.phone}} </p>
+            <p><strong>Email:</strong> {{userDetails.email}} </p>
+            <p><strong>Address:</strong> {{userDetails.address}} </p>
+            <p><strong>LinkedIn: <a href=""> {{userDetails.linkedin}} </a></strong></p>
+            <p><strong>Github: <a href=""> {{userDetails.github}} </a></strong></p>
+        </div>
+
+        <!-- <h2>Experience</h2>
+        <div class="experience">
+            <p><strong>Leader Project (2017-2022)</strong></p>
+            <p>Borcelle Company</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+            <p><strong>Senior Graphic Designer (2014-2017)</strong></p>
+            <p>Borcelle Company</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+            <p><strong>Junior Graphic Designer (2012-2014)</strong></p>
+            <p>Borcelle Company</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div> -->
+
+        <h2>Education</h2>
+        <ul>
+            <li *ngFor="let edu of userDetails.educations">
+                {{edu}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="download">
+    <button class="download" (click)="downloadPDF()">DOWNLOAD RESUME</button>
+</div>

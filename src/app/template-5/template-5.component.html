@@ -1,0 +1,57 @@
+<div class="container" id="resume-content">
+    <!-- Left Column -->
+    <div class="left-column">
+        <div class="profile-picture">
+            <img *ngIf="userDetails.profileImg" [src]="userDetails.profileImg" class="img-thumbnail" alt="Profile Picture">
+        </div>
+
+        <div class="skills">
+            <h3 class="section-title">Skills:</h3>
+            <ul>
+               <li *ngFor="let skill of userDetails.skills">
+                    {{skill}}
+               </li>
+            </ul>
+        </div>
+
+        <div class="language">
+            <h3 class="section-title">Language:</h3>
+            <ul>
+                <li *ngFor="let lang of userDetails.languages">
+                    {{lang}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h3 class="section-title">Contact</h3>
+            <p>{{userDetails.address}}</p>
+            <p> {{userDetails.phone}} </p>
+            <p> {{userDetails.email}} </p>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <h1>{{userDetails.name}}</h1>
+        <!-- <h3>Art Director</h3> -->
+
+        <h2>About Me</h2>
+        <p>{{userDetails.objective}}</p>
+
+        <p>LinkedIn: <a href=""> {{userDetails.linkedin}} </a></p>
+        <p>Github: <a href=""> {{userDetails.github}} </a></p>
+
+        <h2>Education:</h2>
+        <ul>
+            <li *ngFor="let edu of userDetails.educations">
+                {{edu}}
+            </li>
+        </ul>
+        
+    </div>
+</div>
+
+<div class="download">
+    <button class="download" (click)="downloadPDF()">DOWNLOAD RESUME</button>
+</div>

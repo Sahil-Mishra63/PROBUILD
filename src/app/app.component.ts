@@ -10,11 +10,17 @@ import { EmailGenComponent } from "./MyComponents/email-gen/email-gen.component"
 import { ExpertisePageComponent } from "./expertise-page/expertise-page.component";
 import { MainFresherPageComponent } from "./main-fresher-page/main-fresher-page.component";
 import { FrontPageComponent } from "./front-page/front-page.component";
+import { Template1Component } from "./template-1/template-1.component";
+import { Template2Component } from "./template-2/template-2.component";
+import { Template3Component } from "./template-3/template-3.component";
+import { Template4Component } from "./template-4/template-4.component";
+import { Template5Component } from "./template-5/template-5.component";
+import { TemplateSelectionComponent } from "./template-selection/template-selection.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainPageComponent, EmailGenComponent, ExpertisePageComponent, MainFresherPageComponent, RouterModule, FrontPageComponent, FormsModule, CommonModule],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainPageComponent, EmailGenComponent, ExpertisePageComponent, MainFresherPageComponent, RouterModule, FrontPageComponent, FormsModule, CommonModule, Template1Component, Template2Component, Template3Component, Template4Component, Template5Component, TemplateSelectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

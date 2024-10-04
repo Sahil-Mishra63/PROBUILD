@@ -1,0 +1,79 @@
+<div class="container" id="resume-content">
+    <!-- Left Column -->
+    <div class="left-column">
+        <!-- Profile Image -->
+        <div class="profile-picture">
+            <img *ngIf="userDetails.profileImg" [src]="userDetails.profileImg" alt="Profile Picture" class="img-thumbnail">
+        </div>
+
+        <!-- About Me -->
+        <div class="about">
+            <h3 class="section-title">About Me</h3>
+            <p>
+                {{userDetails.objective}}
+            </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-info">
+            <h3 class="section-title">Contact</h3>
+            <ul>
+                <li><span>📞</span> {{userDetails.phone}} </li>
+                <li><span>📧</span> {{userDetails.email}} </li>
+                <li><span>📍</span> {{userDetails.address}} </li>
+                <li><span>LinkedIn</span><a href="">{{userDetails.linkedin}}</a></li>
+                <li><span>Github</span><a href="">{{userDetails.github}}</a></li>
+            </ul>
+        </div>
+
+        <!-- Key Skills -->
+        <div class="skills">
+            <h3 class="section-title">Skills</h3>
+            <ul>
+                <li *ngFor="let skill of userDetails.skills">
+                    {{skill}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="languages">
+            <h3 class="section-title">Languages</h3>
+            <ul>
+                <li *ngFor="let lang of userDetails.languages">
+                    {{lang}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <h1><strong>{{userDetails.name}}</strong></h1>
+        <!-- <h2>Computer Software Developer</h2> -->
+
+
+        <!-- Education -->
+        <div class="education">
+            <h3>Education</h3>
+            <ul>
+                <li *ngFor="let edu of userDetails.educations">
+                    {{edu}}
+                </li>
+            </ul>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="hobbies">
+            <h3>Hobbies</h3>
+            <ul>
+                <li *ngFor="let hobbie of userDetails.hobbies">
+                    {{hobbie}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="download">
+    <button class="download" (click)="downloadPDF()">DOWNLOAD RESUME</button>
+</div>
