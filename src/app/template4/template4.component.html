@@ -1,0 +1,65 @@
+<div class="container" id="resume-content">
+    <div class="left-column">
+        <div class="profile-picture">
+            <img *ngIf="expertDetails.profileImg" [src]="expertDetails.profileImg" class="img-thumbnail" alt="Profile Picture">
+        </div>
+        <h2>About Me:</h2>
+        <p>
+            {{expertDetails.objective}}
+        </p>
+        <h2>Skills:</h2>
+        <ul>
+            <li *ngFor="let skill of expertDetails.skills">
+                {{skill}}
+            </li>
+        </ul>
+
+        <h2>Languages:</h2>
+        <div class="language-bar">
+            <ul>
+                <li *ngFor="let lang of expertDetails.languages">
+                    {{lang}}
+                </li>
+            </ul>
+        </div>
+
+        <h2>Hobbies/interests:</h2>
+        <ul>
+            <li *ngFor="let hobbie of expertDetails.hobbies">
+                {{hobbie}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="right-column">
+        <h1>{{expertDetails.name}}</h1>
+        <!-- <h3>Graphic Designer</h3> -->
+        <div class="contact-info">
+            <p><strong>Phone:</strong> {{expertDetails.phone}} </p>
+            <p><strong>Email:</strong> {{expertDetails.email}} </p>
+            <p><strong>Address:</strong> {{expertDetails.address}} </p>
+            <p><strong>LinkedIn: <a href=""> {{expertDetails.linkedin}} </a></strong></p>
+            <p><strong>Github: <a href=""> {{expertDetails.github}} </a></strong></p>
+        </div>
+
+        <h2>Experience</h2>
+        <div class="experience">
+            <ul>
+                <li *ngFor="let we of expertDetails.experiences">
+                    {{we}}
+                </li>
+            </ul>
+        </div>
+
+        <h2>Education</h2>
+        <ul>
+            <li *ngFor="let edu of expertDetails.educations">
+                {{edu}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="download">
+    <button class="download" (click)="downloadPDF()">DOWNLOAD RESUME</button>
+</div>

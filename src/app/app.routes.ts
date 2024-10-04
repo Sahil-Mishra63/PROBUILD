@@ -10,6 +10,12 @@ import { Template3Component } from './template-3/template-3.component';
 import { Template4Component } from './template-4/template-4.component';
 import { Template5Component } from './template-5/template-5.component';
 import { TemplateSelectionComponent } from './template-selection/template-selection.component';
+import { Template01Component } from './template1/template1.component';
+import { Template02Component } from './template2/template2.component';
+import { Template03Component } from './template3/template3.component';
+import { Template04Component } from './template4/template4.component';
+import { Template05Component } from './template5/template5.component';
+import { TemplateMenuComponent } from './template-menu/template-menu.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -29,6 +35,12 @@ export const appRoutes: Routes = [
     { path: 'template4', component: Template4Component },
     { path: 'template5', component: Template5Component },
     { path: 'template-selection', component: TemplateSelectionComponent},
+    { path: 'template-1', component: Template01Component},
+    { path: 'template-2', component: Template02Component},
+    { path: 'template-3', component: Template03Component},
+    { path: 'template-4', component: Template04Component},
+    { path: 'template-5', component: Template05Component},
+    { path: 'template-menu', component: TemplateMenuComponent },
 ];
 
 // @NgModule({

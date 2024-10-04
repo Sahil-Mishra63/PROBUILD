@@ -1,0 +1,10 @@
+
+<h3 class="text-center  display-1">SELECT A TEMPLATE</h3>
+
+<div class="template-grid">
+  <!-- Loop through each template and display it -->
+  <div *ngFor="let template of templates" class="template-item">
+    <img [src]="template.image" alt="Template {{ template.id }}" (click)="selectTemplate(template.route)">
+    <p>Template {{ template.id }}</p>
+  </div>
+</div>

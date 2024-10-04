@@ -14,38 +14,74 @@
 
                 <div class="form-group mt-3">
                     <label for="full-name">Name</label>
-                    <input type="text" id="full-name" placeholder="Full Name" required="true" class="form-control">
+                    <input type="text" [(ngModel)]="expertDetails.name" id="full-name" placeholder="Full Name" required="true" class="form-control">
                 </div>
                 <div class="form-group mt-2">
                     <label for="dob">DOB</label>
-                    <input type="date" id="dob" placeholder="Full Name" required="true" class="form-control">
+                    <input type="date" [(ngModel)]="expertDetails.dob" id="dob" placeholder="Full Name" required="true" class="form-control">
                 </div>
                 <div class="form-group mt-2">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="10 Digit phone number" required="true"
+                    <input type="tel" [(ngModel)]="expertDetails.phone" id="phone" placeholder="10 Digit phone number" required="true"
                         class="form-control">
                 </div>
                 <div class="form-group mt-2">
                     <label for="email">E-Mail</label>
                     <!-- <input type="tel" id="email" placeholder="someone@example.com" required="true" class="form-control"><br> -->
-                    <input type="email" id="email" placeholder="example@domain.com" required="true"
+                    <input type="email" [(ngModel)]="expertDetails.email" id="email" placeholder="example@domain.com" required="true"
                         class="form-control">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 
                 </div>
                 <div class="form-group mt-2">
                     <label for="address">Address</label>
-                    <textarea id="address" cols="30" rows="3" placeholder="Present Address" required="true"
+                    <textarea id="address" [(ngModel)]="expertDetails.address" cols="30" rows="3" placeholder="Present Address" required="true"
                         class="form-control"></textarea>
                 </div>
 
                 <div class="form-group mt-2">
                     <label for="profile-img">Profile Picture</label>
                     <input type="file" id="profile-img" accept="image/*" class="form-control"
-                        placeholder="upload profile picture" onchange="previewImage(event)">
+                        placeholder="upload profile picture" (change)="previewImage($event)">
 
-                    <img src="#" alt="Uploaded Image" srcset="" style="display: none;" id="image-preview"
+                    <img *ngIf="imagePreview" [src]="imagePreview" alt="Uploaded Image" srcset="" style="display: none;" id="image-preview"
                         class="img-thumbnail">
+                </div>
+                <div class="form-group mt-2"></div>
+                    <div id="add-hobbies-input-div" class="mt-2 text-start">
+                        <label for="hobbies-input">Hobbies</label>
+                        <div class="input-group" id="hobbies-input-section">
+                            <input type="text" [(ngModel)]="newHobbie" class="form-control" id="hobbie-input" placeholder="Enter your hobbies/interests">
+                        <div class=" input-group-append">
+                            <button class="btn btn-primary" id="hobbie-input-button" type="button" (click)="addHobbies()">Add
+                                <i class=" fa-solid fa-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="hobbies" *ngFor="let hobbie of hobbies; let i = index">
+                        <div class="hobbies-item my-2 d-flex justify-content-between bg-white p-2 border rounded">
+                            <div class="hobbies-item my-2">{{hobbie}}</div>
+                        <button class="btn btn-danger btn-sm" (click)="removeHobbies(i)">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-2"></div>
+                    <div id="add-languages-input-div" class="mt-2 text-start">
+                        <label for="languages-input">Languages</label>
+                        <div class="input-group" id="languages-input-section">
+                            <input type="text" [(ngModel)]="newLang" class="form-control" id="language-input" placeholder="Enter the languages you're proficient in">
+                        <div class=" input-group-append">
+                            <button class="btn btn-primary" id="language-input-button" type="button" (click)="addLanguages()">Add
+                                <i class=" fa-solid fa-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="languages" *ngFor="let language of languages; let i = index">
+                        <div class="languages-item my-2 d-flex justify-content-between bg-white p-2 border rounded">
+                            <div class="languages-item my-2">{{language}}</div>
+                        <button class="btn btn-danger btn-sm" (click)="removeLanguages(i)">Remove</button>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -56,14 +92,14 @@
                     <label for="linkedin">LinkedIn
                         <i class="fa-brands fa-linkedin"></i>
                     </label>
-                    <input type="text" id="linkedin" class="form-control" placeholder="Enter LinkedIn URL">
+                    <input type="text" [(ngModel)]="expertDetails.linkedin" id="linkedin" class="form-control" placeholder="Enter LinkedIn URL">
                 </div>
                 <div class="form-group mt-1">
                     <label for="github">Github
                         <!-- <i class="fa-brands fa-square-github"></i> -->
                         <i class="fa-brands fa-github"></i>
                     </label>
-                    <input type="text" id="github" class="form-control" placeholder="Enter Github URL">
+                    <input type="text" [(ngModel)]="expertDetails.github" id="github" class="form-control" placeholder="Enter Github URL">
                 </div>
             </div>
 
@@ -75,7 +111,7 @@
                 <!-- Objective  -->
                 <div class="form-group mt-3">
                     <label for="objective">Objective</label>
-                    <textarea id="objective" placeholder="Write a short objective you want to pitch"
+                    <textarea id="objective" [(ngModel)]="expertDetails.objective" placeholder="Write a short objective you want to pitch"
                         class="form-control"></textarea>
                 </div>
 
@@ -147,7 +183,7 @@
         <button (click)="startOver()" class="btn btn-outline-secondary">Reset
             <i class="fa-solid fa-rotate-right"></i>
         </button>
-        <button class="btn btn-success">Generate Resume
+        <button type="submit" class="btn btn-success" (click)="submit()">Generate Resume
             <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
     </div>

@@ -1,0 +1,57 @@
+<div class="container" id="resume-content">
+    <div class="sidebar">
+        <div class="profile-picture">
+            <img *ngIf="expertDetails.profileImg" [src]="expertDetails.profileImg" alt="Profile Picture" class="img-thumbnail">
+        </div>
+        <h1 class="name">{{expertDetails.name}}</h1>
+        <!-- <h2 class="job-title">JOB TITLE HERE</h2> -->
+        <div class="profile">
+            <h3>PROFILE</h3>
+            <p>{{expertDetails.objective}}</p>
+        </div>
+        <div class="contact">
+            <h3>CONTACT</h3>
+            <p><strong>Phone:</strong> {{expertDetails.phone}}</p>
+            <p><strong>Email:</strong> <a href="mailto:someone@example.com">{{expertDetails.email}}</a></p>
+            <p><strong>LinkedIn:</strong> <a href="#">{{expertDetails.linkedin}}</a></p>
+            <p><strong>Github:</strong> <a href="#">{{expertDetails.github}}</a></p>
+            <div class="hobbies">
+                <h5>Hobbies</h5>
+            <ul style="list-style: none;">
+                <li *ngFor="let hobbie of expertDetails.hobbies">
+                    {{hobbie}}
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="section">
+            <h3>WORK EXPERIENCE</h3>
+            <ul>
+                <li *ngFor="let we of expertDetails.experiences">
+                    {{we}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>SKILLS</h3>
+            <ul>
+                <li *ngFor="let skill of expertDetails.skills">{{skill}}</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>EDUCATION</h3>
+            <ul class="education-entry">
+                <li *ngFor="let edu of expertDetails.educations">{{edu}}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="download">
+    <button class="download" (click)="downloadPDF()">DOWNLOAD RESUME</button>
+</div>

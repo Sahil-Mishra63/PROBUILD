@@ -1,0 +1,78 @@
+<div class="container" id="resume-content">
+    <!-- Left Column -->
+    <div class="left-column">
+        <div class="profile-picture">
+            <img *ngIf="expertDetails.profileImg" [src]="expertDetails.profileImg" class="img-thumbnail" alt="Profile Picture">
+        </div>
+
+        <div class="contact">
+            <h3>Contact</h3>
+            <p><strong>Phone:</strong>{{expertDetails.phone}}</p>
+            <p><strong>Email:</strong> {{expertDetails.email}} </p>
+            <p><strong>Address:</strong> {{expertDetails.address}} </p>
+            <p><strong>LinkedIn:</strong><a href=""> {{expertDetails.linkedin}} </a></p>
+            <p><strong>Github:</strong><a href=""> {{expertDetails.github}} </a></p>
+        </div>
+
+        <div class="interests">
+            <h3>Interests</h3>
+            <ul>
+                <li *ngFor="let hobbie of expertDetails.hobbies">
+                    {{hobbie}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="languages">
+            <h3>Languages</h3>
+            <ul>
+                <li *ngFor="let lang of expertDetails.languages">
+                    {{lang}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <h1>{{expertDetails.name}}</h1>
+        <!-- <h2>Administrative Assistant</h2> -->
+
+        <div class="about">
+            <h3>About Me</h3>
+            <p>{{expertDetails.objective}}</p>
+        </div>
+
+        <div class="education">
+            <h3>Education</h3>
+            <ul>
+                <li *ngFor="let edu of expertDetails.educations">
+                    <strong>{{edu}}</strong>
+                </li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li *ngFor="let skill of expertDetails.skills">
+                    <strong>{{skill}}</strong>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="skills">
+            <h3>WORK EXPERIENCE</h3>
+            <ul>
+                <li *ngFor="let we of expertDetails.experiences">
+                    {{we}}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="download">
+    <button class="download" (click)="downloadPDF()">DOWNLOAD RESUME</button>
+</div>
