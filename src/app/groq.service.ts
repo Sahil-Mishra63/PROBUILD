@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class GroqService {
 
   private apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
-  private apiKey = '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'; //api key
+  private apiKey = 'Your API key here'; //api key
 
   constructor(private http: HttpClient) {}
 
