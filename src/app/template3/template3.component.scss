@@ -11,15 +11,18 @@
     height: 237mm; 
 }
 
-/* Left Column */
+/* Left Column */ 
 .left-column {
     width: 35%;
     background-color: #c4a79c;
     padding: 30px;
     color: #fff;
+    // text-align: center;
+    // margin-left: 5px;
+    // flex-wrap: wrap;
 }
 
-.profile-picture {
+.profile-picture { 
     text-align: center;
     margin-bottom: 20px;
 }
@@ -39,8 +42,9 @@
 }
 
 .about p, .contact-info p, .skills ul, .reference p {
-    margin-top: 10px;
+    // margin-top: 10px;
     line-height: 1.6;
+    // margin-left: 5px;
 }
 
 .skills ul, .contact-info ul {
@@ -53,7 +57,16 @@
 
 .contact-info ul li {
     display: flex;
+    // justify-content: flex-start;
     align-items: center;
+    // margin: auto;
+    margin-left: -30px;
+   
+}
+
+.contact-info p{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-info ul li span {

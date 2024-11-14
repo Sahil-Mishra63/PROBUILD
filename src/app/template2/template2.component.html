@@ -10,8 +10,8 @@
             <p><strong>Phone:</strong>{{expertDetails.phone}}</p>
             <p><strong>Email:</strong> {{expertDetails.email}} </p>
             <p><strong>Address:</strong> {{expertDetails.address}} </p>
-            <p><strong>LinkedIn:</strong><a href=""> {{expertDetails.linkedin}} </a></p>
-            <p><strong>Github:</strong><a href=""> {{expertDetails.github}} </a></p>
+            <p><strong>LinkedIn:</strong><a [href]="expertDetails.linkedin" target="_blank"> {{expertDetails.linkedin}} </a></p>
+            <p><strong>Github:</strong><a [href]="expertDetails.github" target="_blank"> {{expertDetails.github}} </a></p>
         </div>
 
         <div class="interests">

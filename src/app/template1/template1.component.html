@@ -13,8 +13,8 @@
             <h3>CONTACT</h3>
             <p><strong>Phone:</strong> {{expertDetails.phone}}</p>
             <p><strong>Email:</strong> <a href="mailto:someone@example.com">{{expertDetails.email}}</a></p>
-            <p><strong>LinkedIn:</strong> <a href="#">{{expertDetails.linkedin}}</a></p>
-            <p><strong>Github:</strong> <a href="#">{{expertDetails.github}}</a></p>
+            <p><strong>LinkedIn:</strong> <a [href]="expertDetails.linkedin" target="_blank">{{expertDetails.linkedin}}</a></p>
+            <p><strong>Github:</strong> <a [href]="expertDetails.github" target="_blank">{{expertDetails.github}}</a></p>
             <div class="hobbies">
                 <h5>Hobbies</h5>
             <ul style="list-style: none;">

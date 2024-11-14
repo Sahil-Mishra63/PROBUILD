@@ -39,8 +39,8 @@
         <h2>About Me</h2>
         <p>{{userDetails.objective}}</p>
 
-        <p>LinkedIn: <a href=""> {{userDetails.linkedin}} </a></p>
-        <p>Github: <a href=""> {{userDetails.github}} </a></p>
+        <p>LinkedIn: <a [href]="userDetails.linkedin" target="_blank"> {{userDetails.linkedin}} </a></p>
+        <p>Github: <a [href]="userDetails.github" target="_blank"> {{userDetails.github}} </a></p>
 
         <h2>Education:</h2>
         <ul>

@@ -1,1 +1,16 @@
-<p>email-generator works!</p>
+<!-- src/app/chat/chat.component.html -->
+<div class="top">
+    <h1>THE EMAIL GENERATOR</h1>
+   </div>
+  <div class="chat-container">
+    <div *ngFor="let chat of chatHistory">
+      <p><strong>You:</strong> {{ chat.question }}</p>
+      <p><strong>Bot:</strong> {{ chat.answer }}</p>
+    </div>
+  
+    <!-- < class="full-width"> -->
+      <input matInput placeholder="Enter a prompt to generate an email" [(ngModel)]="userInput" (keyup.enter)="askQuestion()" />
+    
+    <button mat-raised-button color="primary" (click)="askQuestion()">Generate</button>
+  </div>
+  

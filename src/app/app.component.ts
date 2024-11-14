@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { BrowserModule} from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -16,11 +17,14 @@ import { Template3Component } from "./template-3/template-3.component";
 import { Template4Component } from "./template-4/template-4.component";
 import { Template5Component } from "./template-5/template-5.component";
 import { TemplateSelectionComponent } from "./template-selection/template-selection.component";
+import { EmailGeneratorComponent } from "./email-generator/email-generator.component";
+import { GroqService } from './groq.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainPageComponent, EmailGenComponent, ExpertisePageComponent, MainFresherPageComponent, RouterModule, FrontPageComponent, FormsModule, CommonModule, Template1Component, Template2Component, Template3Component, Template4Component, Template5Component, TemplateSelectionComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainPageComponent, EmailGenComponent, ExpertisePageComponent, MainFresherPageComponent, RouterModule, FrontPageComponent, FormsModule, CommonModule, Template1Component, Template2Component, Template3Component, Template4Component, Template5Component, TemplateSelectionComponent, EmailGeneratorComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

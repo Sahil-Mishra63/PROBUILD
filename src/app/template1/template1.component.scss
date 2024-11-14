@@ -19,6 +19,7 @@
     width: 35%;
     padding: 20px;
     text-align: center;
+    
 }
 
 .profile-picture img {
@@ -42,6 +43,9 @@
 
 .profile, .contact {
     margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .profile h3, .contact h3 {
@@ -49,6 +53,12 @@
     color: white;
     padding: 5px;
     margin-bottom: 10px;
+}
+
+.contact p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .main-content {

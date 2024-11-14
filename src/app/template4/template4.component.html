@@ -38,8 +38,8 @@
             <p><strong>Phone:</strong> {{expertDetails.phone}} </p>
             <p><strong>Email:</strong> {{expertDetails.email}} </p>
             <p><strong>Address:</strong> {{expertDetails.address}} </p>
-            <p><strong>LinkedIn: <a href=""> {{expertDetails.linkedin}} </a></strong></p>
-            <p><strong>Github: <a href=""> {{expertDetails.github}} </a></strong></p>
+            <p><strong>LinkedIn: <a [href]="expertDetails.linkedin" target="_blank"> {{expertDetails.linkedin}} </a></strong></p>
+            <p><strong>Github: <a [href]="expertDetails.github" target="_blank"> {{expertDetails.github}} </a></strong></p>
         </div>
 
         <h2>Experience</h2>

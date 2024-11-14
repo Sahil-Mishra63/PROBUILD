@@ -21,7 +21,7 @@ export class HeaderComponent {
   }
 
   openEmailGenerator(){
-    window.open('/email-generator', '_blank');
+    window.location.href = 'http://localhost:50827/';
   }
   
 

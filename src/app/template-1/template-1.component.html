@@ -13,10 +13,10 @@
             <h3>CONTACT</h3>
             <p><strong>Phone:</strong> {{userDetails.phone}}</p>
             <p><strong>Email:</strong> <a href="mailto:someone@example.com">{{userDetails.email}}</a></p>
-            <p><strong>LinkedIn:</strong> <a href="#">{{userDetails.linkedin}}</a></p>
-            <p><strong>Github:</strong> <a href="#">{{userDetails.github}}</a></p>
+            <p><strong>LinkedIn:</strong> <a [href]="userDetails.linkedin" target="_blank">{{userDetails.linkedin}}</a></p>
+            <p><strong>Github:</strong> <a [href]="userDetails.github" target="_blank">{{userDetails.github}}</a></p>
             <div class="hobbies">
-                <h5>Hobbies</h5>
+                <strong><h5>Hobbies</h5></strong>
             <ul style="list-style: none;">
                 <li *ngFor="let hobbie of userDetails.hobbies">
                     {{hobbie}}

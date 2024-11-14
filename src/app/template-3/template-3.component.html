@@ -21,9 +21,11 @@
                 <li><span>📞</span> {{userDetails.phone}} </li>
                 <li><span>📧</span> {{userDetails.email}} </li>
                 <li><span>📍</span> {{userDetails.address}} </li>
-                <li><span>LinkedIn</span><a href="">{{userDetails.linkedin}}</a></li>
-                <li><span>Github</span><a href="">{{userDetails.github}}</a></li>
+                <!-- <li><span>LinkedIn</span><a [href]="userDetails.linkedin" target="_blank">{{userDetails.linkedin}}</a></li>
+                <li><span>Github</span><a [href]="userDetails.github" target="_blank">{{userDetails.github}}</a></li> -->
             </ul>
+            <p><span>LinkedIn</span><a [href]="userDetails.linkedin" target="_blank">{{userDetails.linkedin}}</a></p>
+            <p><span>Github</span><a [href]="userDetails.github" target="_blank">{{userDetails.github}}</a></p>
         </div>
 
         <!-- Key Skills -->
